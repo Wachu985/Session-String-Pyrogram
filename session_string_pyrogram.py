@@ -7,7 +7,7 @@ async def stringGenerate():
     client = Client("memory", api_id, api_hash)
     await client.connect()
     
-    phone_number = input("Insert your phone number: \n")
+    phone_number = input("Insert your phone number: \nIncluding Country code. Example: +5357653423 \n")
     print("Sending code to telegram... \n")
     code = await client.send_code(phone_number)
     
